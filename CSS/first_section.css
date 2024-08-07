@@ -1,0 +1,119 @@
+.section-one{
+  margin-top: 60px;
+}
+.products-grid-container{
+  display:grid;
+  grid-template-columns: repeat((8,1fr));
+  
+}
+@media(max-width:2000px){
+  .products-grid-container{
+    grid-template-columns: repeat(7,1fr);
+  }
+}
+@media(max-width:1600px){
+  .products-grid-container{
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+@media(max-width:1300px){
+  .products-grid-container{
+    grid-template-columns: repeat(5,1fr);
+  }
+}
+@media(max-width:1000px){
+  .products-grid-container{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+@media(max-width:800px){
+  .products-grid-container{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+@media(max-width:515px){
+  .products-grid-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media(max-width:450px){
+  .products-grid-container{
+    grid-template-columns: 1fr;
+  }
+}
+.product-container{
+   padding-top: 40px;
+ padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
+
+  display: flex;
+  flex-direction: column;
+}
+.product-image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  margin-bottom: 20px;
+}
+.product-image{
+   max-width: 100%;
+  max-height: 100%;
+}
+
+.product-name{
+   height: 40px;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.ratings{
+   display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.rating-icons{
+  width: 100px;
+  margin-right: 6px;
+}
+.product-rating-count {
+font-size: 18px;
+ color: rgb(1, 124, 182);
+cursor: pointer;;
+}
+.product-price{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.select-number{
+   margin-bottom: 17px;
+}
+.product-spacer{
+  flex:1;
+}
+.select-number select{
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  border-radius:7px;
+  background-color: rgb(243, 237, 237);
+}
+
+.add-to-cart-button button{
+  border-radius: 50px;
+ padding: 8px;
+  font-size: 12px;
+  background-color: rgb(255, 216, 20);
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+}
+select:focus{
+  outline:2px solid  rgb(254, 189, 105);
+}

@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* Outer Wrapper CSS */
+.amazon-header-section{
+ background-color: rgb(19, 25, 33);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+.amazon-header-section a{
+  color: white;
+  text-decoration: none;
+}
+
+/* Inner Section CSS */
+
+.inner-header-section{
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 10px ;
+   display: flex;
+}
+/*Header Left section  CSS */
+
+.header-left-section{
+  display: flex;
+  border-radius: 1px solid white;
+}
+.header-left-section div{
+margin-right: 30px;
+}
+.header-left-section .gps-location:hover{
+border: 1px solid white;
+height: 40px;
+cursor: pointer;
+align-items:center;
+text-align:center;
+}
+.header-left-section .amazon-logo{
+  width: 100px;
+  color: white;
+  margin-left: -10px;
+  align-items: center;
+  margin-top: 10px;
+ /* filter: brightness(0) invert(1); */
+}
+.header-left-section {
+  width: 180px;
+}
+
+@media (max-width: 800px) {
+  .header-left-section {
+    width: unset;
+  }
+}
+@media (max-width:575px) {
+  .amazon-logo{
+    display: none;
+  }
+  .moblie-logo{
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+  }
+  .header-left-section div{
+    margin-right: 0px;
+  }
+  
+}
+@media (min-width:576px){
+  .amazon-logo{
+    display: block;
+  }
+  .moblie-logo{
+    display: none;
+  }
+}
+/*Header Middle Section  CSS */
+
+.header-middle-section{
+  flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+.header-middle-section input
+{
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+.amazon-select-catagory select{
+padding: 11px;
+border: none;
+margin-right: 1px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+.amazon-search-button button{}
+@media (min-width:800px){
+  .search-bar{
+    width: 500px;
+  }
+}
+@media (max-width:576px){
+  .search-bar{
+    width: 120px;
+  }
+}
+.amazon-search-button button{
+  background-color: rgb(254, 189, 105);
+  width: 45px;
+  height: 40px;
+  text-align: center;
+  background-position:center;
+  background-size: cover;
+  cursor: pointer;
+   padding: 10px 0;
+  border:none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+ 
+}
+.search-button{
+  font-size: 10px;
+}
+.search-box-icon{
+    height: 25px; 
+}
+
+/*Header  Right SEction CSS */
+
+.header-right-section{
+  display: flex;
+  padding-right: 10px;
+  right: 0;
+}
+.header-right-section .amazon-cart-icon{
+ width: 50px;
+  right: 0;
+}
+.returns-and-orders span{
+  margin:0 15px;
+}
+.orders-text{
+  display: block;
+  font-size: 15px;
+font-weight: bold;
+}
+.returns-text{
+  font-size: 15px;
+  display: block;
+
+}
+.cart-text{
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+ right: 10px;
+ top: 30px;
+}
+.cart-quantity{
+  color: rgb(240, 136, 4);
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+   top: 13px;
+   right: 45px;
+  width: 26px;
+  text-align: center;
+
+}
+
+@media(min-width:576px){
+  .returns-and-orders span{
+    margin-right: 50px;
+  }
+}
+
+
