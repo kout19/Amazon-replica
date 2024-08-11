@@ -1,4 +1,4 @@
-const products = [{
+export const products = [{
   id:'15b6fc6f-3ddt34233-kk4452sf-1',
   image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
   name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
