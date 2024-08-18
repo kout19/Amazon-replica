@@ -1,12 +1,21 @@
 import { products } from "../data/products.js";
 let quantityNumber = 0;
-export let cart = [{
+export let cart = JSON.parse(localStorage.getItem('cart'));
+if (!cart)
+{
+ cart= [{
   productId: '15b6fc6f-3ddt34233-kk4452sf-1',
   quantity:quantityNumber
 }, {
   productId: '15b6fc6f-3ddt34233-kk4452sf-2',
   quantity:quantityNumber
   }];
+  }
+
+function saveToStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
 export function addToCartFunction(productId) {
   const quantitySelector = document.querySelector(`.js-select-quantity-${productId}`);
    const addedToCart = document.querySelector(`.added-to-cart-${productId}`);
@@ -33,6 +42,7 @@ export function addToCartFunction(productId) {
     setInterval(() => {
       addedToCart.classList.remove("item-added");
     }, 2000);
+  saveToStorage();
 }
 
 export function removeFromCart(productId) {
@@ -43,4 +53,6 @@ export function removeFromCart(productId) {
     }
   })
   cart = newCart;
+  saveToStorage();
 }
+console.log(cart)
