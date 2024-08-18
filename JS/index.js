@@ -1,5 +1,6 @@
 import { cart,addToCartFunction } from "../data/cart.js";
-import {products } from "../data/products.js";
+import { products } from "../data/products.js";
+import { formateCurrency } from "./utilss/money.js";
 let productsHtml = '';
 products.forEach(product => {
  productsHtml+= `
@@ -22,7 +23,7 @@ products.forEach(product => {
             />
             <div class="product-rating-count link-primary">${product.rating.count}</div>
           </div>
-          <div class="product-price">$${(product.PriceCents/100).toFixed(2)}</div>
+          <div class="product-price">$$formateCurrency{(product.PriceCents}</div>
           <div class="select-number">
             <select name="select-number" id="" class="js-select-quantity-${product.id}">
               <option value="1">1</option>
