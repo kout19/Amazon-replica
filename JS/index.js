@@ -23,7 +23,7 @@ products.forEach(product => {
             />
             <div class="product-rating-count link-primary">${product.rating.count}</div>
           </div>
-          <div class="product-price">$$formateCurrency{(product.PriceCents}</div>
+          <div class="product-price">$${formateCurrency(product.PriceCents)}</div>
           <div class="select-number">
             <select name="select-number" id="" class="js-select-quantity-${product.id}">
               <option value="1">1</option>

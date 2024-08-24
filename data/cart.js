@@ -1,4 +1,5 @@
 import { products } from "../data/products.js";
+// import { itemQuantity } from "../JS/checkout.js";
 let quantityNumber = 0;
 export let cart = JSON.parse(localStorage.getItem('cart'));
 if (!cart)
@@ -44,6 +45,10 @@ export function addToCartFunction(productId) {
     }, 2000);
   saveToStorage();
 }
+
+// export function quantitySaveToLocalstorage() {
+//   localStorage.setItem('quantity', quantityNumber);
+// }
 
 export function removeFromCart(productId) {
   const newCart = [];
