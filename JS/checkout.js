@@ -1,4 +1,4 @@
-import { cart,removeFromCart } from "../data/cart.js";
+import { cart,removeFromCart, updateDeliveryOption } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formateCurrency } from "./utilss/money.js";
 import { deliveryOptions } from "../data/deliveryOption.js";
@@ -35,7 +35,7 @@ cart.forEach((orderedElement) => {
   
           <div class="cart-item-container js-cart-item-container-${matchingId.id}">
             <div class="delivery-date">
-              Delivery date: ${dateString}
+              Delivery date: ${dateString} 
             </div>
 
             <div class="cart-item-details-grid">
@@ -84,7 +84,7 @@ function deliveryOptionsHTML(matchingId) {
     const priceString = deliverOption.priceCents == 0 ? 'Free- ' : `$${formateCurrency(deliverOption.priceCents)}`
       html+=
     `
-     <div class="delivery-option">
+     <div class="delivery-option js-delivery-option " data-product-id="${matchingId.id}" data-delivery-option-id="${deliverOption.id}">
                   <input type="radio"
                     class="delivery-option-input"
                     name="delivery-option-${matchingId.id}">
@@ -136,3 +136,9 @@ const deliveryDate = today.add(7, 'days');
 
   const checkoutItemQuantity = document.querySelector('.js-return-to-home-link');
 checkoutItemQuantity.innerHTML = itemQuantity+' items';
+document.querySelectorAll('.js-delivery-option').forEach((element) => {
+  element.addEventListener("click", () => {
+    const { productId, deliveryOptionId } = element.dataset;
+    updateDeliveryOption(productId, deliveryOptionId);
+  })
+})
