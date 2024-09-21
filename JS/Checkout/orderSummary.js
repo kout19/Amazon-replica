@@ -1,7 +1,7 @@
 import { cart,removeFromCart, updateDeliveryOption } from "../../data/cart.js";
-import { products } from "../../data/products.js";
+import { products,getProduct } from "../../data/products.js";
 import { formateCurrency } from "../utilss/money.js";
-import { deliveryOptions } from "../../data/deliveryOption.js";
+import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOption.js";
 let checkoutHtml = '';
 let itemQuantity = 0;
 function updateItemQuantity() {
@@ -18,28 +18,16 @@ export function renderOrderSummary() {
 
   cart.forEach((orderedElement) => {
     let productId = orderedElement.productId;
-    let matchingId;
+    const matchingId = getProduct(productId);
     // itemQuantity += orderedElement.quantity;
-    products.forEach((product) => {
-      if (productId === product.id) {
-        matchingId = product;
-      }
-    })
     // console.log(matchingId)
     let cartItemHolder;
     cart.forEach((cartItem) => {
       cartItemHolder = cartItem;
     })
-    const deliveryOptionId = cartItemHolder.deliveryOptionId;
-    let deliveryOption;
-    deliveryOptions.forEach((option) => {
-      if (option.id === deliveryOptionId) {
-        deliveryOption = option;
-
-      }
-      
-    })
-    // console.log(deliveryOption.priceCents);
+        const deliveryOptionId = cartItemHolder.deliveryOptionId;
+        const deliveryOption = getDeliveryOption(deliveryOptionId);
+  
         const today = dayjs();
         const deliverDate = today.add(deliveryOption.deliveryDays, 'days');
         const dateString = deliverDate.format('dddd, MMMM D');

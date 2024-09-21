@@ -1,3 +1,14 @@
+export function getProduct(productId) {
+  let matchingId;
+    products.forEach((product) => {
+      if (productId === product.id) {
+        matchingId = product;
+      }
+    })
+  return matchingId;
+}
+
+
 export const products = [{
   id:'15b6fc6f-3ddt34233-kk4452sf-1',
   image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
