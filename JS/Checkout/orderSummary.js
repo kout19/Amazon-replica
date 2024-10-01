@@ -2,6 +2,7 @@ import { cart,removeFromCart, updateDeliveryOption } from "../../data/cart.js";
 import { products,getProduct } from "../../data/products.js";
 import { formateCurrency } from "../utilss/money.js";
 import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOption.js";
+import {  renderPaymentSummary} from "./paymentSummary.js";
 let checkoutHtml = '';
 let itemQuantity = 0;
 function updateItemQuantity() {
@@ -142,6 +143,8 @@ export function renderOrderSummary() {
       console.log(productId)
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      renderPaymentSummary();
+      renderpa
     })
   })
 }
