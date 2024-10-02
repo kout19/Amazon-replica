@@ -3,7 +3,7 @@ import { products,getProduct } from "../../data/products.js";
 import { formateCurrency } from "../utilss/money.js";
 import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOption.js";
 import {  renderPaymentSummary} from "./paymentSummary.js";
-let checkoutHtml = '';
+// let checkoutHtml = '';
 let itemQuantity = 0;
 function updateItemQuantity() {
   cart.forEach((orderedElement) => {
@@ -72,8 +72,6 @@ export function renderOrderSummary() {
                 </div>
               </div>
             </div>
-
-
     `
   });
   function deliveryOptionsHTML(matchingId) {
@@ -98,8 +96,7 @@ export function renderOrderSummary() {
                       </div>
                     </div>
                   </div>
-      `
-      
+   `      
     })
     return html;
   }
@@ -129,7 +126,6 @@ export function renderOrderSummary() {
     })
 
   }
-
   const today = dayjs();
   const deliveryDate = today.add(7, 'days');
   // console.log(deliveryDate)
@@ -144,7 +140,6 @@ export function renderOrderSummary() {
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
       renderPaymentSummary();
-      renderpa
     })
   })
 }
