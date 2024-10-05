@@ -1,4 +1,4 @@
-import { formateCurrency } from "../JS/utilss/money.js"
+import { formateCurrency } from "../../JS/utilss/money.js"
 describe('Test suit(group): formateCurrency', () => {
   it('converting cents to dollar', ()=> {
     expect(formateCurrency(2095)).toEqual('20.95');

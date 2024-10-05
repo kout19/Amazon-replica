@@ -1,7 +1,10 @@
 import { products } from "../data/products.js";
 // import { itemQuantity } from "../JS/checkout.js";
 let quantityNumber = 0;
-export let cart = JSON.parse(localStorage.getItem('cart'));
+export let cart;
+loadFromStorage();
+export function loadFromStorage() {
+  cart = JSON.parse(localStorage.getItem('cart'));
 if (!cart)
 {
  cart= [{
@@ -14,7 +17,7 @@ if (!cart)
     deliveryOptionId:'2'
   }];
   }
-
+}
 function saveToStorage() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
