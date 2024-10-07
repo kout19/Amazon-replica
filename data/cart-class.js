@@ -2,13 +2,13 @@ let quantityNumber = 0;
 
 class Cart{
   cartItems = undefined;
-  localStorageKey = undefined;
+  #localStorageKey = undefined;
   constructor(localStorageKey) {
     this.localStorageKey = localStorageKey;
-    this.loadFromStorage();
+    this.#loadFromStorage();
   }
-  loadFromStorage() {
-      this.cartItems = JSON.parse(localStorage.getItem(this.localStorageKey));
+  #loadFromStorage() {
+      this.cartItems = JSON.parse(localStorage.getItem(this.#localStorageKey));
       if (!this.cartItems) {
         this.cartItems = [{
           productId: '15b6fc6f-3ddt34233-kk4452sf-1',
@@ -23,7 +23,7 @@ class Cart{
   }
   
   saveToStorage() {
-    localStorage.setItem(this.localStorageKey, JSON.stringify(this.cartItems));
+    localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
   }
   
 
@@ -82,5 +82,6 @@ class Cart{
 
 let cart = new Cart('cart-oop');
 let bussinesCart = new Cart('cart-bussines');
+ 
 console.log(cart)
 console.log(bussinesCart)
