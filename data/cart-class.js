@@ -1,5 +1,4 @@
 let quantityNumber = 0; 
-
 class Cart{
   cartItems = undefined;
   #localStorageKey = undefined;
