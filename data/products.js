@@ -1,3 +1,5 @@
+import { formateCurrency } from "../JS/utilss/money.js";
+
 export function getProduct(productId) {
   let matchingId;
     products.forEach((product) => {
@@ -8,8 +10,30 @@ export function getProduct(productId) {
   return matchingId;
 }
 
+class Product{
+  id;
+  name;
+  image;
+  rating;
+  PriceCents;
+  constructor(productDetails) {
+    this.id = productDetails.id;
+    this.name = productDetails.name;
+    this.image = productDetails.image;
+    this.rating = productDetails.rating;
+    this.PriceCents = productDetails.PriceCents;
+  }
+  getStarsURL() {
+    return `images/ratings/rating-${this.rating.stars*10}.png`
+    
+  }
+  getPrice() {
+    return `${formateCurrency(this.PriceCents)}`
+  }
 
-export const products = [{
+}
+export const products = [
+  {
   id:'15b6fc6f-3ddt34233-kk4452sf-1',
   image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
   name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -17,7 +41,12 @@ export const products = [{
     stars: 4.5,
     count: 87
   },
-  PriceCents: 1090
+  PriceCents: 1090,
+   keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
 },
   {
   id:'15b6fc6f-3ddt34233-kk4452sf-2',
@@ -27,7 +56,12 @@ export const products = [{
     stars: 4,
     count: 127
   },
-  PriceCents: 2095
+    PriceCents: 2095,
+   keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
 },
   {
   id:'15b6fc6f-3ddt34233-kk4452sf-3',
@@ -37,7 +71,12 @@ export const products = [{
     stars: 4.5,
     count: 56
   },
-  PriceCents: 799
+    PriceCents: 799,
+   keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-4',
     image: 'images/products/black-2-slot-toaster.jpg',
@@ -46,7 +85,12 @@ export const products = [{
       stars: 5,
       count: 2197
     },
-    PriceCents: 1899
+    PriceCents: 1899,
+     keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-5',
   image: 'images/products/6-piece-white-dinner-plate-set.jpg',
@@ -55,7 +99,12 @@ export const products = [{
   stars: '4',
   count:'37'
   },
-PriceCents:'2067'
+    PriceCents: '2067',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-6',
   image: 'images/products/6-piece-non-stick-baking-set.webp',
@@ -64,7 +113,12 @@ PriceCents:'2067'
   stars: '4',
   count:'37'
   },
-PriceCents:'2067'
+    PriceCents: '2067',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-7',
   image: 'images/products/backpack.jpg',
@@ -73,7 +127,12 @@ PriceCents:'2067'
   stars: '3.5',
   count:'80'
   },
-PriceCents:'1023'
+    PriceCents: '1023',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-8',
   image: 'images/products/bathroom-rug.jpg',
@@ -82,7 +141,12 @@ PriceCents:'1023'
   stars: '4.5',
   count:'107'
   },
-PriceCents:'1458'
+    PriceCents: '1458',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-9',
   image: 'images/products/coffeemaker-with-glass-carafe-black.jpg',
@@ -91,7 +155,12 @@ PriceCents:'1458'
   stars: '4',
   count:'147'
   },
-PriceCents:'1562'
+    PriceCents: '1562',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-10',
   image: 'images/products/blackout-curtain-set-beige.webp',
@@ -100,7 +169,12 @@ PriceCents:'1562'
   stars: '5',
   count:'1000'
   },
-PriceCents:'1865'
+    PriceCents: '1865',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-11',
   image: 'images/products/blackout-curtains-black.jpg',
@@ -109,7 +183,12 @@ PriceCents:'1865'
   stars: '3.5',
   count:'2001'
   },
-PriceCents:'1856'
+    PriceCents: '1856',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-12',
   image: 'images/products/women-stretch-popover-hoodie-black.jpg',
@@ -118,7 +197,12 @@ PriceCents:'1856'
   stars: '4',
   count:'2564'
   },
-PriceCents:'2089'
+    PriceCents: '2089',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-13',
   image: 'images/products/luxury-tower-set-6-piece.jpg',
@@ -127,7 +211,12 @@ PriceCents:'2089'
   stars: '4',
   count:'1625'
   },
-PriceCents:'1856'
+    PriceCents: '1856',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-14',
   image: 'images/products/men-chino-pants-beige.jpg',
@@ -136,5 +225,13 @@ PriceCents:'1856'
   stars: '3',
   count:'25'
   },
-PriceCents:'1045'
-  }];
+    PriceCents: '1045',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  }
+].map((productDetails) => {
+  return new Product(productDetails);
+});
