@@ -11,26 +11,44 @@ export function getProduct(productId) {
 }
 
 class Product{
-  id;
-  name;
-  image;
-  rating;
-  PriceCents;
+    id;
+    name;
+    image;
+    rating;
+    PriceCents;
+    constructor(productDetails) {
+      this.id = productDetails.id;
+      this.name = productDetails.name;
+      this.image = productDetails.image;
+      this.rating = productDetails.rating;
+      this.PriceCents = productDetails.PriceCents;
+    }
+    getStarsURL() {
+      return `images/ratings/rating-${this.rating.stars*10}.png`
+      
+    }
+    getPrice() {
+      return `${formateCurrency(this.PriceCents)}`
+    }
+    extraInfoHTML() {
+      return `<a href="${this.sizeChartLink}" target="_blank"> size chart </a>`
+    }
+
+}
+
+class Clothing extends Product{
+  sizeChartLink;
   constructor(productDetails) {
-    this.id = productDetails.id;
-    this.name = productDetails.name;
-    this.image = productDetails.image;
-    this.rating = productDetails.rating;
-    this.PriceCents = productDetails.PriceCents;
+    super(productDetails);
+    this.sizeChartLink = productDetails.sizeChartLink;
   }
-  getStarsURL() {
-    return `images/ratings/rating-${this.rating.stars*10}.png`
+ extraInfoHTML() {
+    return `<a href="${this.sizeChartLink}" target="_blank">
+    Size Chart 
+    </a>`;
     
   }
-  getPrice() {
-    return `${formateCurrency(this.PriceCents)}`
-  }
-
+ 
 }
 export const products = [
   {
@@ -73,10 +91,11 @@ export const products = [
   },
     PriceCents: 799,
    keyWrods: [
-    'socks',
+    'tshirt',
     'sports',
     'apparel'
-  ]
+    ],
+    sizeChartLink: 'images/clothing-size-chart.png'
   }, {
     id:'15b6fc6f-3ddt34233-kk4452sf-4',
     image: 'images/products/black-2-slot-toaster.jpg',
