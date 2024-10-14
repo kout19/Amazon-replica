@@ -268,7 +268,156 @@ export const products = [
     'sports',
     'apparel'
   ]
-  }
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-15',
+  image: 'images/products/cotton-bath-towels-teal.webp',
+  name: 'cotton-bath-towels-teal',
+    rating:{
+  stars: '3.5',
+  count:'25'
+  },
+    PriceCents: '1076',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-16',
+  image: 'images/products/sky-flower-stud-earrings.webp',
+  name: 'Sky flower',
+    rating:{
+  stars: '4',
+  count:'125'
+  },
+    PriceCents: '2015',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-17',
+  image: 'images/products/countertop-blender-64-oz.jpg',
+  name: 'countertop blender',
+    rating:{
+  stars: '3',
+  count:'100'
+  },
+    PriceCents: '2080',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-18',
+  image: 'images/products/coffeemaker-with-glass-carafe-black.jpg',
+  name: 'Black coffee maker carafe',
+    rating:{
+  stars: '4.5',
+  count:'68'
+  },
+    PriceCents: '3045',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-19',
+  image: 'images/products/double-elongated-twist-french-wire-earrings.webp',
+  name: 'Double elongated twist french wire',
+    rating:{
+  stars: '3.5',
+  count:'500'
+  },
+    PriceCents: '5000',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-20',
+  image: 'images/products/duvet-cover-set-blue-twin.jpg',
+  name: 'Duvet cover set blue twin',
+    rating:{
+  stars: '4',
+  count:'450'
+  },
+    PriceCents: '6000',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-21',
+  image: 'images/products/liquid-laundry-detergent-plain.jpg',
+  name: 'Liquid laundry detergent',
+    rating:{
+  stars: '4',
+  count:'125'
+  },
+    PriceCents: '3000',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },{
+    id:'15b6fc6f-3ddt34233-kk4452sf-22',
+  image: 'images/products/vanity-mirror-silver.jpg',
+  name: 'Silver mirror',
+    rating:{
+  stars: '4',
+  count:'225'
+  },
+    PriceCents: '700',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-23',
+  image: 'images/products/women-chiffon-beachwear-coverup-black.jpg',
+  name: 'Women black chiffon ',
+    rating:{
+  stars: '4.5',
+  count:'50'
+  },
+    PriceCents: '1990',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
+ {
+    id:'15b6fc6f-3ddt34233-kk4452sf-24',
+  image: 'images/products/women-chunky-beanie-gray.webp',
+  name: 'Women gray chunky',
+    rating:{
+  stars: '5',
+  count:'400'
+  },
+    PriceCents: '4500',
+ keyWrods: [
+    'socks',
+    'sports',
+    'apparel'
+  ]
+  },
 ].map((productDetails) => {
   return new Product(productDetails);
 });
